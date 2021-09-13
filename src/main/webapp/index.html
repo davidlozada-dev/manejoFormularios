@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Servlet Form 2</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="recursos/estilos.css">
+        <script type="text/javascript" src="recursos/funciones.js"> </script> 
+    </head>
+    <body>
+        <h1>Servlet Form 2</h1>
+        <form name="form2" action="/manejoFormularios/Servlet" method="post" onsubmit="return validarForma(this)">
+        <input type="hidden" name="oculto" value="valorOculto"/>
+            <table width="200" id="enfasis-columna">
+                
+                <caption>
+                    Formulario para el registro de datos
+                </caption>
+                
+                <tr>
+                    <td class="columna">
+                        Usuario: (*)
+                    </td>
+                    <td>
+                        <input class="default" type="text" name="usuario" value="Escribir usuario" onfocus="this.select()"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columna">
+                        Password: (*)
+                    </td>
+                    <td>
+                        <input class="default" type="password" name="password" onfocus="this.select"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columna">
+                        Tecnologias de interes: (*)
+                    </td>
+                    <td>
+                        <input type="checkbox" id="java" name="tecnologia" value="java"/>Java
+                        &nbsp;&nbsp;&nbsp;
+                        <input type="checkbox" id="net" name="tecnologia" value=".Net"/>.Net
+                        &nbsp;&nbsp;&nbsp;
+                        <input type="checkbox" id="php" name="tecnologia" value="PHP"/>PHP
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columna">
+                        Genero: (*)
+                    </td>
+                    <td>
+
+                        <input type="radio" id="masculino" name="genero" value="Masculino"/> Maculino
+                        &nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="femenino" name="genero" value="Femenino"/> Femenino
+                        &nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="no-binario" name="genero" value="No binario"/> No binario
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columna">
+                        Ocupacion: (*)
+                    </td>
+                    <td>
+                        <select class="default" name="ocupacion" id="ocupacion">
+                            <option value="">Seleccionar</option>
+                            <option name="op1" value="ingeniero">Ingeniero</option>
+                            <option name="op2" value="abogado">Abogado</option>
+                            <option name="op3" value="licenciado">Licenciado</option>
+                            <option name="op4" value="otro">Otro</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columna">
+                        Musica favorita:
+                    </td>
+                    <td>
+                        <select class="default" multiple name="musica" id="musica">
+                            <option name="op1" value="Pop">Pop</option>
+                            <option name="op2" value="Rock">Rock</option>
+                            <option name="op3" value="Punk">Punk</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columna">
+                        Comentarios:
+                    </td>
+                    <td>
+                        <textarea class="default" name="comentario" rows="4" cols="50" onfocus="this.select()">Escribir texto</textarea>
+                    </td>
+                </tr>
+                <tr style="text-align: center">
+                    <td>
+                        <input class="default" type="reset" value="Limpiar">
+                    </td>
+                    <td>
+                        <input class="default" type="submit" value="Enviar">
+                    </td>
+                </tr>
+
+            </table>
+        </form>
+    </body>
+</html>
